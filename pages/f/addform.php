@@ -5,7 +5,7 @@
 <title>Aggiungi Prodotto</title>
 <link rel="stylesheet" type="text/css" href="view.css" media="all">
 <script type="text/javascript" src="view.js"></script>
-
+<style type="text/css">body {overflow: hidden; background-color: transparent;}</style>
 </head>
 <body id="main_body" >
 	
@@ -14,7 +14,7 @@
 			
 							<?php 
 
-                                include '../config.php'; 
+                                /*include '(disabled)../../config.php'; 
 
                                 $data = new MysqlClass();
                                 $data->connetti();
@@ -75,7 +75,7 @@
                                 echo '</ul>';
                                 echo '</form>';
 
-                                if(mysql_num_rows($post_sql) > 0) {
+                                /*if(mysql_num_rows($post_sql) > 0) {
 
                                     while($post_obj = $data->estrai($post_sql)) {
 
@@ -90,7 +90,7 @@
 
                                 }
 
-                                $data->disconnetti();
+                                $data->disconnetti();*/
                             ?>
 		<div id="footer">
 		</div>
