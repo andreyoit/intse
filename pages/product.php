@@ -10,52 +10,95 @@
         <script src="../scripts/ui/jquery.ui.mouse.js"></script>
         <script src="../scripts/ui/jquery.ui.draggable.js"></script>
         <script src="../scripts/ui/jquery.ui.position.js"></script>
-        <script src="../scripts/ui/jquery.ui.resizable.js"></script>
+        <!--<script src="../scripts/ui/jquery.ui.resizable.js"></script>-->
         <script src="../scripts/ui/jquery.ui.dialog.js"></script>
         <script src="../scripts/ui/jquery.ui.effect.js"></script>
         <script src="../scripts/ui/jquery.ui.effect-blind.js"></script>
-        <script src="../scripts/ui/jquery.ui.effect-explode.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <script>
-        // increase the default animation speed to exaggerate the effect
         $.fx.speeds._default = 500;
         $(function() {
-            $( "#dialog" ).dialog({
+            $( "#dialogadd" ).dialog({
                 autoOpen: false,
                 show: "blind",
-                hide: "blind"
+                hide: "blind",
+                height: 422,
+                width: 402,
+            });
+            $( "#dialogerr" ).dialog({
+                autoOpen: false,
+                show: "blind",
+                hide: "blind",
+                height: 90,
+                width: 200,
+            });
+            $( "#dialogfind" ).dialog({
+                autoOpen: false,
+                show: "blind",
+                hide: "blind",
+                height: 120,
+                width: 250,
             });
 
-            $( "#opener" ).click(function() {
-                $( "#dialog" ).dialog( "open" );
+            $( "#openeradd" ).click(function() {
+                $( "#dialogadd" ).dialog( "open" );
+                return false;
+            });
+            $( "#openerfind" ).click(function() {
+                $( "#dialogfind" ).dialog( "open" );
+                return false;
+            });
+            $( "#openererr" ).click(function() {
+                $( "#dialogerr" ).dialog( "open" );
+                return false;
+            });
+            $( "#openererr2" ).click(function() {
+                $( "#dialogerr" ).dialog( "open" );
+                return false;
+            });
+            $( "#openererr3" ).click(function() {
+                $( "#dialogerr" ).dialog( "open" );
                 return false;
             });
         });
         </script>
+         <style type="text/css">
+        #dialogadd  {overflow:hidden;}
+        #dialogerr  {overflow:hidden;}
+        #dialogfind  {overflow:hidden;}
+        </style>
     </head>
     <body>
-        <div id="dialog" title="Aggiungi" width="420" height="470">
+        <!--<hide>-->
+        <div id="dialogadd" title="Aggiungi" width="420" height="470">
             <iframe src="f/addform.php" width="400" height="450"></iframe>
         </div>
+        <div id="dialogerr" title="Errore" width="420" height="470">
+            <img src="../images/error.png"/><p>Occorre selezionare il prodotto.</p>
+        </div>
+        <div id="dialogfind" title="Cerca" width="420" height="470">
+            <form><label value="Cerca"/><input type="text" value=""><input type="button" value="cerca" action="submit" target="/product.php"/></form>
+        </div>
+    <!--</hide>-->
                 <center>
             <div id="wrapper">                                                      
     			<div width="100%">
                     <table width="80%" align="center" cell-spacing="2px">
                         <tr align="center" width="80%">
                             <td width="14%" nowrap="nowrap" class="buttonlink">
-                                <a href="#" id="opener">Aggiungi</a>
+                                <a href="#" id="openeradd">Aggiungi</a>
                             </td>
                             <td width="14%" nowrap="nowrap" class="buttonlink">
-                                <a href="">Modifica</a>
+                                <a href="#" id="openererr">Modifica</a>
                             </td>
                             <td width="14%" nowrap="nowrap" class="buttonlink">
-                                <a href="">Elimina</a>
+                                <a href="#" id="openererr2">Elimina</a>
                             </td>
                             <td width="14%" nowrap="nowrap" class="buttonlink">
-                                <a href="">Progetta</a>
+                                <a href="#" id="openererr3">Progetta</a>
                             </td>
                             <td  width="14%" nowrap="nowrap" class="buttonlink">
-                                <a href="">Cerca</a>
+                                <a href="#" id="openefind">Cerca</a>
                             </td>
                         </tr>
                     </table>           
