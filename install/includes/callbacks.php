@@ -19,7 +19,7 @@ class Callbacks extends Callbacks_Core
 		}
 
 		$replace = array(
-			'{:db_prefix}' => 'my_',
+			'{:db_prefix}' => '',
 			'{:db_engine}' => in_array('innodb', $this->db_engines) ? 'InnoDB' : 'MyISAM',
 			'{:db_charset}' => $this->db_version >= '4.1' ? 'DEFAULT CHARSET=utf8' : '',
 			'{:website}' => $_SESSION['params']['virtual_path']

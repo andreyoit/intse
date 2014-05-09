@@ -8,7 +8,8 @@ class MysqlClass {
     private $nomedb = 'intse';
     private $attiva = FALSE;
     private $connessione;
-
+    
+//Please don't change above this line unless you know what you're doing.
     public function connetti() {
 
         if(!$this->attiva && ($this->connessione = mysql_connect($this->nomehost, $this->nomeuser, $this->password) or die(mysql_error()))) {

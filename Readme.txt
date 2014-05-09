@@ -6,7 +6,7 @@
 
 	Since this is a Beta preview use admin/admin to login.
 
-	Install: Make SQL Table [Users (username,password)] in db intse@localhost (edit config.php)
+	Install: Run db/intse.sql to populate db tables.
 
 	Features:
 
@@ -21,15 +21,31 @@
 	Requirements:
 
 	- Apache 2x/PHP 5.5/MySQL
-	- IONCube Loader VC9 (32Bits), VC11 (64Bits)
+	- IONCube Loader VC9 (32Bits), VC11 (64Bits) For the Installer
 
 	Coming:
 
 	- Internal Mail System in progress.
 	- Missing Pages
 	- MultiLanguage Scripts
+	- Make the List AddForm working whit add/modify feature. 
 
 	Changelog:
+
+	0.2.0:
+		
+		- Added Context Menu to stats page (for testing)
+		- Some bug correction (install bug persist)
+		- Added some missing scripts
+		- Added .htaccess file (blank)
+		- Added AlphaInstall Script (there is some uncorrectable errors)
+		- Added standard value SQL file (Run in PHPmyAdmin to populate db tables)
+
+	0.1.9:
+
+		- Working jQuery UI Modal Dialog In "Lists"
+		- Added "Error" Modal Dialog whit error.png icon
+		- Added "Find" Modal Dialog whit Search button.
 
 	0.1.8:
 		- Added "Add" Modal Poupup Form in "Lists".
